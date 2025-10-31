@@ -26,11 +26,19 @@ function addTodo() {
 }
 
 function deleteTodo() {
-    const clear
+    if (confirm('Are you sure you want to delete all todos?')) {
+        todos = [];
+        renderTodos();
+    }
 }   
 
-function filterTodos() {
+function filterTodo() {
+    const keyword = document.getElementById('todo-input').value.toLowerCase();
+    const filterTodo = todos.filter(todo => 
+        todo.task.toLowerCase().includes(keyword)
+    );
 
+    renderTodos(filtered);
 }   
 
 function renderTodos() {
