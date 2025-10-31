@@ -27,19 +27,14 @@ function addTodo() {
 
 function deleteTodo() {
     if (confirm('Are you sure you want to delete all todos?')) {
-        todos = [];
+        todos = []; 
         renderTodos();
     }
 }   
 
-function filterTodo() {
-    const keyword = document.getElementById('todo-input').value.toLowerCase();
-    const filterTodo = todos.filter(todo => 
-        todo.task.toLowerCase().includes(keyword)
-    );
-
-    renderTodos(filtered);
-}   
+// function filterTodo() {
+//     const filterinput = document.getElementById('filter-input').value.toLowerCase();
+// }   
 
 function renderTodos() {
     const todoList = document.getElementById('todo-list');
@@ -48,9 +43,7 @@ function renderTodos() {
     todoList.innerHTML = ''; 
 
     // Render each todo
-    todos.forEach((todo, index) => {
-        todoList.innerHTML += `<li>
-            <span>${todo.task} - ${todo.date}</span>
-        </li>`;
+    todos.forEach((todo) => {
+        todoList.innerHTML += `<li><span>${todo.task} - ${todo.date}</span></li>`;
     });
 }

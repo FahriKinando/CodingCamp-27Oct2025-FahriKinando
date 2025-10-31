@@ -21,13 +21,15 @@
                     </form>
                 </section>
                 
-                <section class="flex justify-between my-4">
-                    <button class="border p-2 rounded bg-red-500 text-white cursor-pointer font-bold" type="button" onclick="deleteTodo();" id="clear-all-btn">Clear All Todos</button>
+                <!-- <section class="flex justify-start mb-4">
                     <button class="border p-2 rounded bg-cyan-500 text-white cursor-pointer font-bold" type="button" onclick="filterTodo();" id="filter-todos-btn">Filter Todos</button>
-                    
+                </section> -->
+                <section class="flex-grow text-right gap-2 mb-4">
+                    <button class="border p-2 rounded bg-red-500 text-white cursor-pointer font-bold" type="button" onclick="deleteTodo();" id="clear-all-btn">Clear All Todos</button>
                 </section>
+                    
                 
-                <section class="border-1 rounded p-2">
+                <section class="border-1 rounded p-2 bg-gray-200">
                     <ul class="text-center" id="todo-list">
                         <li>No To Do Available</li>
                     </ul>
